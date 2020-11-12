@@ -1,0 +1,10 @@
+- hosts: envs
+  remote_user: ubuntu
+  vars_files:
+  - group_vars/envs
+  - host_vars/prod
+  - host_vars/uat
+  roles:
+    - install_LAMP
+    - start_services
+    - web
